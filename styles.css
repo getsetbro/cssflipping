@@ -2,6 +2,9 @@
 /* flip */
 
 .flipper {
+  -ms-touch-action: manipulation;	/* IE10  */
+  touch-action: manipulation;		/* IE11+ */
+  
   -webkit-perspective: 4000px;
   -moz-perspective: 4000px;
   -ms-perspective: 4000px;
