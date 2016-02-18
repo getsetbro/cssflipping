@@ -6,31 +6,22 @@
     -ms-perspective: 4000px;
     perspective: 4000px;
 
-    -ms-transform: perspective(4000px);
-    -moz-transform: perspective(4000px);
-    -o-transform: perspective(4000px);
-    -webkit-transform: perspective(4000px);
-    transform: perspective(4000px);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 
     height: 300px;
-    max-width:360px;
+    max-width:390px;
     margin:0 auto 30px;
 }
 
 .flipper {
-    -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
     -o-transition: 0.6s;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
 
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-
-    -webkit-transform: perspective(4000px);
-    -moz-transform: perspective(4000px);
-    -ms-transform: perspective(4000px);
-    -o-transform: perspective(4000px);
-    transform: perspective(4000px);
 
     position: relative;
     height:100%;
@@ -49,12 +40,6 @@
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-
     position: absolute;
     top: 0;
     right:0;
@@ -72,6 +57,14 @@
     transform: rotateY(0);
     z-index: 2;
 }
+.flip-container:hover .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
 .back {
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
@@ -86,13 +79,7 @@
     -o-transform: rotateY(0);
     transform: rotateY(0);
 }
-.flip-container:hover .front {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
+
 .card{
   height: 100%;
 }
