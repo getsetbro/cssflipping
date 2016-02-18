@@ -17,24 +17,6 @@
     margin:0 auto 30px;
 }
 
-.flip-container:hover .back,
-.flip-container.hover .back {
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-}
-
-.flip-container:hover .front,
-.flip-container.hover .front {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        -o-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-}
-
 .flipper {
     -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
@@ -73,7 +55,6 @@
     -o-transform: rotateY(0);
     transform: rotateY(0);
 
-
     position: absolute;
     top: 0;
     right:0;
@@ -91,7 +72,6 @@
     transform: rotateY(0);
     z-index: 2;
 }
-
 .back {
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
@@ -99,7 +79,20 @@
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
-
+.flip-container:hover .back {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+}
+.flip-container:hover .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 .card{
   height: 100%;
 }
