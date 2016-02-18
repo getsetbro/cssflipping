@@ -7,61 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="bootstrap-flex/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script>
-  (function () {
-    "use strict";
 
-    var testElement = document.createElement("_");
-
-    testElement.classList.add("c1", "c2");
-
-    // Polyfill for IE 10/11 and Firefox <26, where classList.add and
-    // classList.remove exist but support only one argument at a time.
-    if (!testElement.classList.contains("c2")) {
-      var createMethod = function(method) {
-        var original = DOMTokenList.prototype[method];
-
-        DOMTokenList.prototype[method] = function(token) {
-          var i, len = arguments.length;
-
-          for (i = 0; i < len; i++) {
-            token = arguments[i];
-            original.call(this, token);
-          }
-        };
-      };
-      createMethod('add');
-      createMethod('remove');
-    }
-
-    testElement.classList.toggle("c3", false);
-
-    // Polyfill for IE 10 and Firefox <24, where classList.toggle does not
-    // support the second argument.
-    if (testElement.classList.contains("c3")) {
-      var _toggle = DOMTokenList.prototype.toggle;
-
-      DOMTokenList.prototype.toggle = function(token, force) {
-        if (1 in arguments && !this.contains(token) === !force) {
-          return force;
-        } else {
-          return _toggle.call(this, token);
-        }
-      };
-
-    }
-
-    testElement = null;
-  }());
-  </script>
 </head>
 <body>
-rev 2.1.1
+rev 2.1.2
   <hr>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -85,7 +39,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -109,7 +63,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -133,7 +87,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -157,7 +111,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -181,7 +135,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -205,7 +159,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -229,7 +183,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -253,7 +207,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -277,7 +231,7 @@ rev 2.1.1
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="flipper" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
               <div class="front">
                 <div class="card card-inverse card-warning text-xs-center">
                   <div class="card-block">
@@ -303,6 +257,7 @@ rev 2.1.1
 
       </div>
     </div>
+
 
 </body>
 </html>
